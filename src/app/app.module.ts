@@ -1,3 +1,4 @@
+import { CoreModule } from './../../projects/stepper-library/src/lib/core/core.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -16,7 +17,7 @@ import { StepperLibraryContainerComponent } from './components/stepper-library-c
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    StepperLibraryModule
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

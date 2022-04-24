@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { StepperLibraryComponent } from './stepper-library.component';
+import { DemoStepOneStepComponent } from './demo-step-one-step.component';
 
-describe('StepperLibraryComponent', () => {
-  let component: StepperLibraryComponent;
-  let fixture: ComponentFixture<StepperLibraryComponent>;
+describe('DemoStepOneStepComponent', () => {
+  let component: DemoStepOneStepComponent;
+  let fixture: ComponentFixture<DemoStepOneStepComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ StepperLibraryComponent ]
+      declarations: [ DemoStepOneStepComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(StepperLibraryComponent);
+    fixture = TestBed.createComponent(DemoStepOneStepComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

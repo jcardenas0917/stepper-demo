@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { StepperLibraryService } from './stepper-library.service';
+import { StepperLibraryService } from '../../service/stepper-library.service';
 
 describe('StepperLibraryService', () => {
   let service: StepperLibraryService;

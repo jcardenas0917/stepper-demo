@@ -1,16 +1,15 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { StepperLibraryComponent } from './stepper-library.component';
+import { SharedModule } from './shared/shared.module';
 
 
 
 @NgModule({
-  declarations: [
-    StepperLibraryComponent
-  ],
+  declarations: [],
   imports: [
+    CommonModule,
+    SharedModule
   ],
-  exports: [
-    StepperLibraryComponent
-  ]
+  exports: []
 })
 export class StepperLibraryModule { }
