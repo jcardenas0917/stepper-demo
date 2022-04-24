@@ -5,10 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StepperLibraryModule } from 'stepper-library';
+import { StepperLibraryContainerComponent } from './components/stepper-library-container/stepper-library-container.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    StepperLibraryContainerComponent
   ],
   imports: [
     BrowserModule,
