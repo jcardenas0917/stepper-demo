@@ -3,9 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'lib-stepper-library',
   template: `
-    <p>
-      stepper-library works!
-    </p>
+    <lib-demo-step-one-step></lib-demo-step-one-step>
   `,
   styles: [
   ]
