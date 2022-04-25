@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { completeStep } from '../../store/demo-step-one-actions';
 
 @Component({
   selector: 'lib-demo-step-one-step',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DemoStepOneStepComponent implements OnInit {
 
-  constructor() { }
+  constructor(private store: Store) { }
 
   ngOnInit(): void {
   }
 
+  dispatchIsCompleteAction(): void {
+    this.store.dispatch(completeStep({ isComplete: true }))
+  }
 }
