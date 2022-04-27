@@ -1,8 +1,10 @@
+import { StoreModule } from '@ngrx/store';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { SharedModule } from '../shared/shared.module';
 import { DemoStepOneStepComponent } from '../steps/demo-step-one/components/demo-step-one-step/demo-step-one-step.component';
 import { StepperLibraryComponent } from './components/stepper-library-component/stepper-library.component';
+import { metaReducers, reducers } from './reducers';
 
 
 
@@ -12,7 +14,13 @@ import { StepperLibraryComponent } from './components/stepper-library-component/
     DemoStepOneStepComponent
   ],
   imports: [
-    CommonModule, SharedModule
+    CommonModule, SharedModule, StoreModule.forRoot(reducers, {
+      metaReducers,
+      runtimeChecks: {
+        strictActionImmutability: true,
+        strictActionSerializability: true
+      }
+    })
   ],
   exports: [StepperLibraryComponent, DemoStepOneStepComponent]
 })
