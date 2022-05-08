@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { SharedModule } from '../shared/shared.module';
 import { DemoStepOneStepComponent } from '../steps/demo-step-one/components/demo-step-one-step/demo-step-one-step.component';
 import { StepperLibraryComponent } from './components/stepper-library-component/stepper-library.component';
-import { metaReducers, reducers } from './store';
+import { metaReducers, reducers } from './index';
 
 
 

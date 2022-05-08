@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { login } from 'projects/stepper-library/src/lib/core/store/actions/core-actions';
-import { IApp, IAppState } from 'projects/stepper-library/src/lib/core/store/app.interface';
-import { getUserName } from 'projects/stepper-library/src/lib/core/store/selectors/core-selector';
 import { completeStep } from '../../store/demo-step-one-actions';
+import { IDemoStepOneState } from '../../store/demo-step-one-reducer';
 
 @Component({
   selector: 'lib-demo-step-one-step',
@@ -12,12 +10,10 @@ import { completeStep } from '../../store/demo-step-one-actions';
 })
 export class DemoStepOneStepComponent implements OnInit {
 
-  constructor(private store: Store<IAppState>) { }
-  logInInfo!: IAppState | any
+  constructor(private store: Store<IDemoStepOneState>) { }
 
   ngOnInit(): void {
-    this.logInInfo = this.store.select(getUserName)
-    console.log(this.logInInfo);
+
   }
 
   dispatchIsCompleteAction(): void {
@@ -25,7 +21,4 @@ export class DemoStepOneStepComponent implements OnInit {
     this.store.dispatch(completeStep({ isComplete: true }))
   }
 
-  login(): void {
-    this.store.dispatch(login({ username: 'username', password: 'password' }));
-  }
 }

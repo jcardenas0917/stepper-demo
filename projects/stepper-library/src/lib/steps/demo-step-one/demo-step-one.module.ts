@@ -7,7 +7,7 @@ import { demoStepOneReducer } from './store/demo-step-one-reducer';
 
 
 @NgModule({
-  imports: [CommonModule, SharedModule, StoreModule.forRoot(demoStepOneReducer)],
+  imports: [CommonModule, SharedModule],
   declarations: [],
 })
 export class DemoStepOneModule { }
