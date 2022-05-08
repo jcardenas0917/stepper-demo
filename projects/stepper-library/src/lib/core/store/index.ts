@@ -1,9 +1,8 @@
 import { ActionReducerMap, MetaReducer } from '@ngrx/store';
-import { IAppState } from './app.interface';
-import { AppReducer } from '../store/reducers/core-reducers';
+import { AppReducer, IDemoStepOneState } from '../../steps/demo-step-one/store/demo-step-one-reducer';
 
-export const reducers: ActionReducerMap<IAppState> = {
+export const reducers: ActionReducerMap<IDemoStepOneState> = {
   AppState: AppReducer,
 };
 
-export const metaReducers: MetaReducer<IAppState>[] = [];
+export const metaReducers: MetaReducer<IDemoStepOneState>[] = [];

@@ -26,6 +26,6 @@ export class DemoStepOneStepComponent implements OnInit {
   }
 
   login(): void {
-    this.store.dispatch(login({ usernamae: 'username', password: 'password' }));
+    this.store.dispatch(login({ username: 'username', password: 'password' }));
   }
 }

@@ -7,8 +7,10 @@ export const userFeatureKey = 'AppState';
 
 export const reducer = createReducer(
   initialAppState as IApp,
-  on(login, (state) => ({
-    ...state
+  on(login, (state, { username, password }) => ({
+    ...state,
+    username,
+    password
   })),
   on(loginSuccess, (state) => ({
     ...state,
@@ -22,5 +24,6 @@ export const reducer = createReducer(
 );
 
 export function AppReducer(state: IApp, action: Action): IApp {
+  console.log(state)
   return reducer(state as IApp, action as Action);
 }
