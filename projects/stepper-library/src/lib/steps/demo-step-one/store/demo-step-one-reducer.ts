@@ -19,7 +19,3 @@ export const demoStepOneReducer = createReducer(
   })
 );
 
-export function AppReducer(state: DemoStepOneState, action: Action): DemoStepOneState {
-  console.log(state);
-  return demoStepOneReducer(state as DemoStepOneState, action as Action);
-}

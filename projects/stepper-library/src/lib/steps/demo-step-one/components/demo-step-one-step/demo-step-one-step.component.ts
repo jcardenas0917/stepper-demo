@@ -17,7 +17,6 @@ export class DemoStepOneStepComponent implements OnInit {
   }
 
   dispatchIsCompleteAction(): void {
-    console.log('clicked')
     this.store.dispatch(completeStep({ isComplete: true }))
   }
 
